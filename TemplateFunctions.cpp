@@ -46,39 +46,57 @@ int main() {
     const int rows = 20;
     const int cols = 20;
     int A = 0, B = 0, C = 0;
-    int Array[size];
-    int TwoDimensionalArray[rows][cols];
+    int IntArray[size];
+    int IntTwoDimensionalArray[rows][cols];
 
-    // Заполнение и вывод одномерного массива
-    FillArray(Array, size);
-    cout << "Заполненный одномерный массив : " << endl;
-    PrintArray(Array, size);
-    cout << "Максимальное значение в массиве : " << FindMax(Array, size) << endl;
+    char CharArray[size];
+    char CharTwoDimensionalArray[rows][cols];
 
-    // Заполнение и вывод двумерного массива
-    cout << "Заполненный двумерный массив : " << endl;
-    FillArray<int, rows, cols>(TwoDimensionalArray);
-    PrintArray<int, rows, cols>(TwoDimensionalArray);
-    cout << "Максимальное значение в двумерном в массиве : " << FindMax<int, rows, cols>(TwoDimensionalArray) << endl;
+    double DoubleArray[size];
+    double DoubleTwoDimensionalArray[rows][cols];
 
-    cout << endl;
+    // Заполнение и вывод одномерных массивов типа int
+    FillArray(IntArray, size);
+    cout << "Заполненный одномерный массив (int) : " << endl;
+    PrintArray(IntArray, size);
+    cout << "Максимальное значение в массиве : " << FindMax(IntArray, size) << endl;
+
+    // Заполнение и вывод двумерных массивов типа int
+    cout << "Заполненный двумерный массив (int) : " << endl;
+    FillArray<int, rows, cols>(IntTwoDimensionalArray);
+    PrintArray<int, rows, cols>(IntTwoDimensionalArray);
+    cout << "Максимальное значение в двумерном в массиве : " << FindMax<int, rows, cols>(IntTwoDimensionalArray) << endl;
+
     cout << endl;
     cout << "-------------------------------------------------------------------------------------------" << endl;
 
-    // Нахождение максимального значения из двух целых
-    cout << "Для нахождения максимального из двух целых введите A и B :";
-    cin >> A >> B;
-    cout << endl;
-    cout << "Максимально значение : " << FindMaxDigit<int>(A, B) << endl;
+    // Заполнение и вывод одномерных массивов типа char
+    FillArray(CharArray, size);
+    cout << "Заполненный одномерный массив (char) : " << endl;
+    PrintArray(CharArray, size);
+    cout << "Максимальное значение в массиве : " << FindMax(CharArray, size) << endl;
 
-    cout << endl;
+    // Заполнение и вывод двумерных массивов типа char
+    cout << "Заполненный двумерный массив (char) : " << endl;
+    FillArray<char, rows, cols>(CharTwoDimensionalArray);
+    PrintArray<char, rows, cols>(CharTwoDimensionalArray);
+    cout << "Максимальное значение в двумерном в массиве : " << FindMax<char, rows, cols>(CharTwoDimensionalArray) << endl;
+
     cout << endl;
     cout << "-------------------------------------------------------------------------------------------" << endl;
 
-    // Нахождение максимального значения из трёх целых
-    cout << "Для нахождения максимального из трёх целых введите A и B и С:";
-    cin >> A >> B >> C;
-    cout << "Максимально значение : " << FindMaxDigit<int>(A, B, C) << endl;
+    // Заполнение и вывод одномерных массивов типа double
+    FillArray(DoubleArray, size);
+    cout << "Заполненный одномерный массив (double) : " << endl;
+    PrintArray(DoubleArray, size);
+    cout << "Максимальное значение в массиве : " << FindMax(DoubleArray, size) << endl;
+
+    // Заполнение и вывод двумерных массивов типа double
+    cout << "Заполненный двумерный массив (double) : " << endl;
+    FillArray<double, rows, cols>(DoubleTwoDimensionalArray);
+    PrintArray<double, rows, cols>(DoubleTwoDimensionalArray);
+    cout << "Максимальное значение в двумерном в массиве : " << FindMax<double, rows, cols>(DoubleTwoDimensionalArray) << endl;
+;
 }
 
 template <typename T>
