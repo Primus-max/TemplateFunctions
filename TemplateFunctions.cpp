@@ -79,8 +79,6 @@ int main() {
     cout << "Для нахождения максимального из трёх целых введите A и B и С:";
     cin >> A >> B >> C;
     cout << "Максимально значение : " << FindMaxDigit<int>(A, B, C) << endl;
-
-    return 0;
 }
 
 template <typename T>
